@@ -69,13 +69,13 @@ export default function JourneyCarousel() {
       <div className="mx-auto max-w-6xl px-5">
         <h2 className="text-center text-3xl font-black md:text-4xl">A Journey Shaped by Purpose</h2>
 
-        <div className="mt-12 grid grid-cols-5 items-center text-sm font-bold text-white/55">
+        <div className="mt-8 grid grid-cols-5 items-center text-xs font-bold text-white/55 md:mt-12 md:text-sm">
           {journey.map((item, index) => (
             <button
               key={item.year}
               type="button"
               onClick={() => changeSlide(index, index > activeIndex ? 'next' : 'previous')}
-              className="group relative flex items-center justify-center gap-3 transition hover:text-white"
+              className="group relative flex items-center justify-center gap-1.5 py-2 transition hover:text-white md:gap-3"
               aria-current={index === activeIndex ? 'step' : undefined}
             >
               <span className="h-px flex-1 border-t border-dashed border-white/25" />
@@ -89,7 +89,7 @@ export default function JourneyCarousel() {
           ))}
         </div>
 
-        <div className="mt-16 grid items-center gap-8 md:grid-cols-[48px_0.85fr_1.35fr_48px]">
+        <div className="mt-10 grid items-center gap-8 md:mt-16 md:grid-cols-[48px_0.85fr_1.35fr_48px]">
           <button
             type="button"
             aria-label="Previous milestone"
