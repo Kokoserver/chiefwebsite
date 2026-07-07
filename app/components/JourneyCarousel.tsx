@@ -55,11 +55,12 @@ export default function JourneyCarousel() {
     }, 180);
   };
 
+  const atStart = activeIndex === 0;
+  const atEnd = activeIndex === journey.length - 1;
+
   const move = (direction: 'previous' | 'next') => {
-    const nextIndex =
-      direction === 'previous'
-        ? activeIndex === 0 ? journey.length - 1 : activeIndex - 1
-        : activeIndex === journey.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = direction === 'previous' ? activeIndex - 1 : activeIndex + 1;
+    if (nextIndex < 0 || nextIndex >= journey.length) return;
 
     changeSlide(nextIndex, direction);
   };
@@ -94,7 +95,8 @@ export default function JourneyCarousel() {
             type="button"
             aria-label="Previous milestone"
             onClick={() => move('previous')}
-            className="hidden h-10 w-10 items-center justify-center text-4xl font-light text-white/80 transition hover:text-white md:flex"
+            disabled={atStart}
+            className="hidden h-10 w-10 items-center justify-center text-4xl font-light text-white/80 transition hover:text-white disabled:cursor-default disabled:text-white/25 md:flex"
           >
             ‹
           </button>
@@ -128,14 +130,15 @@ export default function JourneyCarousel() {
             type="button"
             aria-label="Next milestone"
             onClick={() => move('next')}
-            className="hidden h-10 w-10 items-center justify-center text-4xl font-light text-white/80 transition hover:text-white md:flex"
+            disabled={atEnd}
+            className="hidden h-10 w-10 items-center justify-center text-4xl font-light text-white/80 transition hover:text-white disabled:cursor-default disabled:text-white/25 md:flex"
           >
             ›
           </button>
 
           <div className="flex justify-center gap-4 md:hidden">
-            <button type="button" onClick={() => move('previous')} className="text-4xl text-white/80" aria-label="Previous milestone">‹</button>
-            <button type="button" onClick={() => move('next')} className="text-4xl text-white/80" aria-label="Next milestone">›</button>
+            <button type="button" onClick={() => move('previous')} disabled={atStart} className="text-4xl text-white/80 disabled:text-white/25" aria-label="Previous milestone">‹</button>
+            <button type="button" onClick={() => move('next')} disabled={atEnd} className="text-4xl text-white/80 disabled:text-white/25" aria-label="Next milestone">›</button>
           </div>
         </div>
       </div>
