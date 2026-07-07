@@ -21,7 +21,7 @@ const footerLinks = [
 export default function SiteFooter() {
   return (
     <footer className="bg-white py-14">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 text-sm text-gray-500 md:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 text-sm text-gray-500 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="mb-5">
             <BrandLogo />
@@ -50,7 +50,7 @@ export default function SiteFooter() {
           <p>“Leadership without compassion is nothing more than ambition without purpose.”</p>
         </div>
       </div>
-      <div className="mx-auto mt-12 flex max-w-6xl items-center justify-between border-t border-black/10 px-5 pt-8 text-xs text-gray-400">
+      <div className="mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-black/10 px-5 pt-8 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
         <p>All Rights Reserved © 2026 {siteConfig.foundationName}</p>
         <div className="flex gap-3"><span>in</span><span>ig</span><span>fb</span></div>
       </div>
