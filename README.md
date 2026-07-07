@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chief Alex Achebe — Campaign Website
 
-## Getting Started
+The official campaign and public-service website for **Chief Alex Achebe** and the **Achebe Hope Foundation**. The site presents Dr. Achebe's vision, leadership record, and community work, and gives supporters clear paths to get involved — volunteering, attending events, and donating.
 
-First, run the development server:
+Built with [Next.js 16](https://nextjs.org) (App Router), [React 19](https://react.dev), [Tailwind CSS 4](https://tailwindcss.com), and TypeScript.
+
+## Site sections
+
+- **Home** (`/`) — hero, policy pillars, fundraising progress, testimonials, and calls to action
+- **The candidate** — `/about`, `/biography`, `/achievements`, `/leadership`, `/public-service`
+- **The platform** — `/manifesto`, `/vision-mission`
+- **Community work** — `/community-projects` (Achebe Hope Foundation initiatives)
+- **News** — `/news` listing with dynamic article pages at `/news/[slug]`
+- **Get involved** — `/support` (donate/volunteer), `/events`, `/gallery`, `/contact`
+
+## Getting started
+
+Install dependencies and run the dev server (this project uses [pnpm](https://pnpm.io)):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build   # production build
+pnpm start   # serve the production build
+pnpm lint    # run eslint
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx          # root layout, fonts, metadata
+  page.tsx            # homepage
+  globals.css         # Tailwind + global styles
+  config/site.ts      # site-wide names/branding
+  components/         # shared UI (navbar, footers, carousels, counters, forms…)
+  <route>/page.tsx    # one folder per site section
+  news/posts.ts       # news article data
+public/
+  campaign-realistic/ # campaign photography (webp)
+  logos/              # partner/sponsor logos
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Site-wide branding (candidate name, foundation name) lives in `app/config/site.ts`. News articles are plain data in `app/news/posts.ts` — add an entry there and the listing and article page pick it up automatically.
