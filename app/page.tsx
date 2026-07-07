@@ -88,7 +88,7 @@ export default function LegacyFoundationVariation() {
           </div>
           <div className="overflow-hidden rounded-2xl shadow-xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/campaign-realistic/portrait-statesman.webp" alt="CHIEF portrait" className="h-[460px] w-full object-cover object-top" />
+            <img src="/campaign-realistic/portrait-statesman.webp" alt="CHIEF portrait" className="h-72 w-full object-cover object-top sm:h-96 md:h-[460px]" />
           </div>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function LegacyFoundationVariation() {
         <img src="/campaign-realistic/community-project.webp" alt="Community project" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-5 md:grid-cols-2">
-          <h2 className="text-3xl font-black leading-tight md:text-4xl">Leadership<br />Measured by Impacts</h2>
+          <h2 className="text-3xl font-black leading-tight md:text-4xl">Leadership<br className="hidden md:block" /> Measured by Impacts</h2>
           <div>
             <p className="text-sm leading-7 text-white/80">
               From business development to philanthropy, every effort is rooted in improving lives through education, healthcare, youth empowerment, and community support.
@@ -109,10 +109,10 @@ export default function LegacyFoundationVariation() {
       </section>
 
       <section id="metrics" className="bg-white py-12">
-        <div className="stagger-list mx-auto grid max-w-6xl gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="stagger-list mx-auto grid max-w-6xl grid-cols-2 gap-4 px-5 md:gap-5 lg:grid-cols-3">
           {metrics.map((metric) => (
-            <div key={metric.label} className="rounded-lg px-8 py-7 text-center text-white shadow-sm" style={{ backgroundColor: metric.tone === 'green' ? green : gold }}>
-              <p className="text-4xl font-black">{metric.value}</p>
+            <div key={metric.label} className="rounded-lg px-4 py-6 text-center text-white shadow-sm md:px-8 md:py-7" style={{ backgroundColor: metric.tone === 'green' ? green : gold }}>
+              <p className="text-3xl font-black md:text-4xl">{metric.value}</p>
               <p className="mt-2 text-xs font-semibold text-white/85">{metric.label}</p>
             </div>
           ))}
@@ -123,7 +123,7 @@ export default function LegacyFoundationVariation() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_0.65fr_0.65fr]">
           <div>
             <p className="mb-4 h-1 w-10 rounded-full" style={{ backgroundColor: gold }} />
-            <h2 className="text-4xl font-black leading-tight">Every legacy begins with<br />one act of kindness</h2>
+            <h2 className="text-3xl font-black leading-tight md:text-4xl">Every legacy begins with<br className="hidden md:block" /> one act of kindness</h2>
             <p className="mt-6 text-sm leading-7 text-gray-600">
               Long before he became a respected business leader, philanthropy, and public service, Hon. CHIEF Alex Achebe represented a defining moment that shaped the course of his life.
             </p>
@@ -149,7 +149,7 @@ export default function LegacyFoundationVariation() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-[0.8fr_1.2fr]">
           <div className="overflow-hidden rounded-xl shadow-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/campaign-realistic/portrait-statesman.webp" alt="Business leadership portrait" className="h-[520px] w-full object-cover object-top" />
+            <img src="/campaign-realistic/portrait-statesman.webp" alt="Business leadership portrait" className="h-80 w-full object-cover object-top sm:h-96 md:h-[520px]" />
           </div>
           <div>
             <h2 className="text-3xl font-black">Business Leadership</h2>
@@ -172,12 +172,12 @@ export default function LegacyFoundationVariation() {
         </div>
       </section>
 
-      <section className="relative py-28 text-center text-white">
+      <section className="relative py-20 text-center text-white md:py-28">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/campaign-realistic/rally.webp" alt="Compassion in action" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative mx-auto max-w-3xl px-5">
-          <h2 className="text-4xl font-black md:text-5xl">Compassion in Action</h2>
+          <h2 className="text-3xl font-black sm:text-4xl md:text-5xl">Compassion in Action</h2>
           <p className="mt-5 text-sm leading-7 text-white/80">
             Through the Achebe Hope Foundation, CHIEF Alex Achebe supports vulnerable families, students, widows, and young people with practical interventions.
           </p>
@@ -235,13 +235,13 @@ export default function LegacyFoundationVariation() {
       </section>
 
       <section className="grid md:grid-cols-2">
-        <div className="h-[430px] overflow-hidden">
+        <div className="h-64 overflow-hidden sm:h-80 md:h-[430px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/campaign-realistic/community-project.webp" alt="Children supported by foundation" className="h-full w-full object-cover" />
         </div>
         <div className="flex items-center px-8 py-16 text-white md:px-16" style={{ backgroundColor: green }}>
           <div>
-            <h2 className="text-4xl font-black leading-tight">The greatest legacy is the lives<br />we help transform</h2>
+            <h2 className="text-3xl font-black leading-tight md:text-4xl">The greatest legacy is the lives<br className="hidden md:block" /> we help transform</h2>
             <p className="mt-6 max-w-xl text-sm leading-7 text-white/70">
               Whether through business, philanthropy, mentorship, or public service, meaningful change begins when opportunity reaches those who need it most.
             </p>
