@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Heritage palette */
+  --commander-dark: #081A0B;
+  --commander-gold: #C9941A;
+  --commander-light: #F7F0DE;
+
+  /* Community palette */
+  --builder-green: #1A5228;
+  --builder-orange: #B84D1A;
+  --builder-cream: #FAF0E0;
+  --builder-light-cream: #FDF6EE;
+
+  /* Civic palette */
+  --reformer-blue: #0C1A3A;
+  --reformer-yellow: #F0B41C;
+  --reformer-light-blue: #EDF6EE;
+  --reformer-white: #FFFFFF;
+  --naija-green: #008751;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-enter {
+  animation: pageEnter 0.55s ease both;
+}
+
+.section-rise {
+  animation: sectionRise 0.65s ease both;
+}
+
+.stagger-list > * {
+  animation: sectionRise 0.55s ease both;
+}
+
+.stagger-list > *:nth-child(1) { animation-delay: 0.04s; }
+.stagger-list > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-list > *:nth-child(3) { animation-delay: 0.16s; }
+.stagger-list > *:nth-child(4) { animation-delay: 0.22s; }
+.stagger-list > *:nth-child(5) { animation-delay: 0.28s; }
+.stagger-list > *:nth-child(6) { animation-delay: 0.34s; }
+.stagger-list > *:nth-child(7) { animation-delay: 0.4s; }
+.stagger-list > *:nth-child(8) { animation-delay: 0.46s; }
+.stagger-list > *:nth-child(9) { animation-delay: 0.52s; }
+
+.image-lift {
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.image-lift:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sectionRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-stagger.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.reveal-stagger.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.reveal-stagger.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.reveal-stagger.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.reveal-stagger.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.reveal-stagger.is-visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  33%  { transform: translateY(-18px) rotate(8deg); }
+  66%  { transform: translateY(8px) rotate(-5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+@keyframes floatSlow {
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-28px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
+@keyframes floatFast {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  25%  { transform: translateY(-12px) rotate(15deg); }
+  75%  { transform: translateY(10px) rotate(-10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes shapeFadeIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+/* Igbo Uli-inspired diamond background pattern */
+.igbo-diamonds {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect x='10' y='10' width='28' height='28' transform='rotate(45 24 24)' stroke='%23C9941A' stroke-width='0.8' fill='none' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+/* Akwete-inspired diagonal stripe pattern */
+.akwete-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(201,148,26,0.06) 10px,
+    rgba(201,148,26,0.06) 11px
+  );
+}
+
+/* Nigerian flag green accent bar */
+.naija-flag-bar::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, #008751 33%, #ffffff 33%, #ffffff 67%, #008751 67%);
+}
