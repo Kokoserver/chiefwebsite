@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.25em]" style={{ color: green }}>About CHIEF</p>
-            <h1 className="text-5xl font-black leading-tight">A life built around enterprise, service, and community impact.</h1>
+            <h1 className="text-3xl font-black sm:text-4xl md:text-5xl leading-tight">A life built around enterprise, service, and community impact.</h1>
             <p className="mt-6 text-sm leading-7 text-gray-600">
               CHIEF Alex Achebe represents a generation of leaders who believe business success must create opportunity, dignity, and lasting transformation for people.
             </p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </div>
           <div className="image-lift overflow-hidden rounded-2xl shadow-xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/campaign-realistic/portrait-statesman.webp" alt="CHIEF portrait" className="h-[520px] w-full object-cover object-top" />
+            <img src="/campaign-realistic/portrait-statesman.webp" alt="CHIEF portrait" className="h-80 w-full object-cover object-top sm:h-96 md:h-[520px]" />
           </div>
         </div>
       </section>

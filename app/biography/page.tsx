@@ -19,7 +19,7 @@ export default function BiographyPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-[1fr_0.8fr]">
           <div>
             <p className="mb-4 h-1 w-10 rounded-full" style={{ backgroundColor: gold }} />
-            <h1 className="text-5xl font-black leading-tight">Every legacy begins with one act of kindness.</h1>
+            <h1 className="text-3xl font-black sm:text-4xl md:text-5xl leading-tight">Every legacy begins with one act of kindness.</h1>
             <p className="mt-6 text-sm leading-7 text-gray-600">
               Long before becoming a respected business leader and philanthropist, CHIEF Alex Achebe experienced the power of support when a teacher helped him complete his examinations.
             </p>

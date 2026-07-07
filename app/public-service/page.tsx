@@ -21,7 +21,7 @@ export default function PublicServicePage() {
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto max-w-4xl px-5 text-center">
           <p className="mb-4 text-xs font-black uppercase tracking-[0.25em] text-white/70">Public Service</p>
-          <h1 className="text-5xl font-black">Leadership measured by impact.</h1>
+          <h1 className="text-3xl font-black sm:text-4xl md:text-5xl">Leadership measured by impact.</h1>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/80">Public service is expressed through advocacy, philanthropy, education support, healthcare access, and direct community development.</p>
         </div>
       </section>

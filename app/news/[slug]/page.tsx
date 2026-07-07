@@ -44,7 +44,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           <div className="mx-auto max-w-4xl px-5">
             <Link href="/news" className="text-xs font-black uppercase tracking-[0.22em]" style={{ color: green }}>← Back to News</Link>
             <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{post.category} · {post.date}</p>
-            <h1 className="mt-4 text-5xl font-black leading-tight">{post.title}</h1>
+            <h1 className="mt-4 text-3xl font-black sm:text-4xl md:text-5xl leading-tight">{post.title}</h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-gray-600">{post.excerpt}</p>
           </div>
         </section>
@@ -52,7 +52,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         <section className="py-10">
           <div className="mx-auto max-w-5xl px-5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/campaign-realistic/${post.image}.webp`} alt={post.title} className="h-[460px] w-full rounded-2xl object-cover shadow-xl" />
+            <img src={`/campaign-realistic/${post.image}.webp`} alt={post.title} className="h-56 w-full rounded-2xl object-cover shadow-xl sm:h-80 md:h-[460px]" />
           </div>
         </section>
 

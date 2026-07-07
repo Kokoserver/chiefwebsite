@@ -18,11 +18,11 @@ export default function LeadershipPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-[0.8fr_1.2fr]">
           <div className="image-lift overflow-hidden rounded-xl shadow-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/campaign-realistic/portrait-statesman.webp" alt="Business leadership portrait" className="h-[560px] w-full object-cover object-top" />
+            <img src="/campaign-realistic/portrait-statesman.webp" alt="Business leadership portrait" className="h-80 w-full object-cover object-top sm:h-96 md:h-[560px]" />
           </div>
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.25em]" style={{ color: green }}>Leadership</p>
-            <h1 className="text-5xl font-black">Business Leadership</h1>
+            <h1 className="text-3xl font-black sm:text-4xl md:text-5xl">Business Leadership</h1>
             <p className="mt-5 text-sm leading-7 text-gray-600">CHIEF Alex Achebe balances public service with private-sector leadership, building organizations that create jobs, strengthen communities, and fund humanitarian work.</p>
             <div className="stagger-list mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {foundationServices.map((service) => (

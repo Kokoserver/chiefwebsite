@@ -17,7 +17,7 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 md:grid-cols-2">
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.25em]" style={{ color: green }}>Contact</p>
-            <h1 className="text-5xl font-black leading-tight">Get in touch with the foundation.</h1>
+            <h1 className="text-3xl font-black sm:text-4xl md:text-5xl leading-tight">Get in touch with the foundation.</h1>
             <p className="mt-6 text-sm leading-7 text-gray-600">For enquiries, partnerships, volunteer coordination, and community support requests, send a message or use the contact details below.</p>
             <div className="mt-8 space-y-3 text-sm text-gray-700">
               <p><strong>Phone:</strong> +234 800 000 0000</p>

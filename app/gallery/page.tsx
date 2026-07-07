@@ -22,7 +22,7 @@ export default function GalleryPage() {
       <section className="section-rise bg-[#F5F1E8] py-20 text-center">
         <div className="mx-auto max-w-3xl px-5">
           <p className="mb-4 text-xs font-black uppercase tracking-[0.25em]" style={{ color: green }}>Gallery</p>
-          <h1 className="text-5xl font-black">Moments of leadership, service, and impact.</h1>
+          <h1 className="text-3xl font-black sm:text-4xl md:text-5xl">Moments of leadership, service, and impact.</h1>
           <p className="mt-5 text-sm leading-7 text-gray-600">Images from leadership, public service, community development, and foundation activities.</p>
         </div>
       </section>
